@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAINA JAMES – Graphic Designer | Nyahururu</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#f59e0b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=professional%20graphic%20design%20workspace%20with%20artistic%20elements%2C%20modern%20desk%20setup%20with%20design%20tools%20and%20computer%2C%20soft%20natural%20lighting%2C%20creative%20atmosphere%2C%20minimalist%20aesthetic%2C%20clean%20workspace%20with%20design%20elements%2C%20soft%20color%20palette%20with%20neutral%20tones%2C%20perfect%20for%20a%20portfolio%20hero%20image&width=1920&height=1080&seq=123456&orientation=landscape');
+            background-size: cover;
+            background-position: right;
+            position: relative;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.4) 100%);
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.hidden {
+            transform: translateX(-100%);
+        }
+        .custom-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .custom-checkbox:checked {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+        }
+        .custom-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 6px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">Maina James</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium text-gray-800 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="font-medium text-gray-800 hover:text-primary transition-colors">About</a>
+                <a href="#portfolio" class="font-medium text-gray-800 hover:text-primary transition-colors">Portfolio</a>
+                <a href="#services" class="font-medium text-gray-800 hover:text-primary transition-colors">Services</a>
+                <a href="#contact" class="font-medium text-gray-800 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#home" class="font-medium text-gray-800 hover:text-primary transition-colors py-2">Home</a>
+                <a href="#about" class="font-medium text-gray-800 hover:text-primary transition-colors py-2">About</a>
+                <a href="#portfolio" class="font-medium text-gray-800 hover:text-primary transition-colors py-2">Portfolio</a>
+                <a href="#services" class="font-medium text-gray-800 hover:text-primary transition-colors py-2">Services</a>
+                <a href="#contact" class="font-medium text-gray-800 hover:text-primary transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="max-w-2xl">
+                <p class="text-primary font-medium mb-2">Creative • Innovative • Professional</p>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">MAINA JAMES</h1>
+                <h2 class="text-xl md:text-2xl font-medium text-gray-700 mb-6">Graphic Designer based in Nyahururu, Kenya</h2>
+                <p class="text-gray-600 text-lg mb-8 max-w-xl">Transforming ideas into visual masterpieces. Specializing in logo design, branding, digital art, and print materials that make your business stand out.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-600 transition-colors">Let's Work Together</a>
+                    <a href="#portfolio" class="border-2 border-primary text-primary px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-colors">View My Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center text-primary">
+            <i class="ri-arrow-down-line ri-xl"></i>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20african%20male%20graphic%20designer%20in%20casual%20smart%20attire%2C%20standing%20confidently%20in%20a%20creative%20studio%20environment%2C%20warm%20lighting%2C%20modern%20design%20studio%20background%2C%20creative%20workspace%2C%20professional%20portrait%20for%20portfolio%2C%20high%20quality%20professional%20headshot&width=600&height=800&seq=123457&orientation=portrait" alt="Maina James - Graphic Designer" class="rounded-lg shadow-lg w-full max-w-md mx-auto object-cover object-top">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hello, I'm Maina James</h3>
+                    <p class="text-gray-700 mb-6">With over 8 years of experience in graphic design, I've had the privilege of working with businesses across Kenya and beyond to create compelling visual identities that resonate with their audiences.</p>
+                    <p class="text-gray-700 mb-6">Based in the beautiful town of Nyahururu, I combine my formal training in graphic design with a passion for African art and contemporary design trends to create unique visual solutions that tell your brand's story.</p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">My Expertise</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary">
+                                    <i class="ri-palette-line ri-lg"></i>
+                                </div>
+                                <span class="font-medium">Logo Design</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary">
+                                    <i class="ri-layout-4-line ri-lg"></i>
+                                </div>
+                                <span class="font-medium">Brand Identity</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary">
+                                    <i class="ri-artboard-2-line ri-lg"></i>
+                                </div>
+                                <span class="font-medium">Print Design</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary">
+                                    <i class="ri-computer-line ri-lg"></i>
+                                </div>
+                                <span class="font-medium">Digital Art</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">Skills</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-700">Adobe Photoshop</span>
+                                    <span class="text-sm text-gray-600">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 h-2 rounded-full">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-700">Adobe Illustrator</span>
+                                    <span class="text-sm text-gray-600">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 h-2 rounded-full">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-700">UI/UX Design</span>
+                                    <span class="text-sm text-gray-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 h-2 rounded-full">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-700">Typography</span>
+                                    <span class="text-sm text-gray-600">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 h-2 rounded-full">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Portfolio</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here's a selection of my recent work. Each project represents a unique challenge and creative solution.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex bg-gray-100 p-1 rounded-full">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary text-white whitespace-nowrap">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Logo Design</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Branding</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Digital Art</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20logo%20design%20for%20a%20coffee%20shop%2C%20professional%20graphic%20design%20work%2C%20clean%20lines%2C%20simple%20shapes%2C%20elegant%20typography%2C%20against%20neutral%20background%2C%20portfolio%20showcase&width=600&height=450&seq=123458&orientation=landscape" alt="Coffee Shop Logo Design" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Savanna Coffee House</h3>
+                        <p class="text-white text-sm mb-4 text-center">Logo design and brand identity for a premium coffee shop in Nairobi.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=complete%20brand%20identity%20package%20for%20a%20tech%20startup%2C%20business%20cards%2C%20letterhead%2C%20logo%20application%2C%20color%20palette%2C%20professional%20graphic%20design%20work%2C%20portfolio%20showcase&width=600&height=450&seq=123459&orientation=landscape" alt="Tech Startup Branding" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">TechHub Kenya</h3>
+                        <p class="text-white text-sm mb-4 text-center">Complete brand identity package for an emerging tech startup.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=creative%20event%20poster%20design%20for%20a%20music%20festival%2C%20vibrant%20colors%2C%20dynamic%20typography%2C%20african%20inspired%20patterns%2C%20professional%20graphic%20design%20work%2C%20portfolio%20showcase&width=600&height=450&seq=123460&orientation=landscape" alt="Music Festival Poster" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Rift Valley Music Festival</h3>
+                        <p class="text-white text-sm mb-4 text-center">Poster and promotional materials for an annual music festival.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=digital%20illustration%20artwork%20with%20african%20themes%2C%20modern%20digital%20art%20style%2C%20vibrant%20colors%2C%20cultural%20elements%2C%20professional%20graphic%20design%20work%2C%20portfolio%20showcase&width=600&height=450&seq=123461&orientation=landscape" alt="Digital Illustration" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Heritage Series</h3>
+                        <p class="text-white text-sm mb-4 text-center">Digital illustration series celebrating Kenyan cultural heritage.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=product%20packaging%20design%20for%20a%20natural%20skincare%20line%2C%20elegant%20minimalist%20design%2C%20earth%20tones%2C%20sustainable%20packaging%2C%20professional%20graphic%20design%20work%2C%20portfolio%20showcase&width=600&height=450&seq=123462&orientation=landscape" alt="Product Packaging" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Aloe Naturals</h3>
+                        <p class="text-white text-sm mb-4 text-center">Packaging design for a premium natural skincare product line.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item group relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=mobile%20app%20user%20interface%20design%2C%20clean%20modern%20UI%20design%2C%20app%20screens%20layout%2C%20professional%20graphic%20design%20work%2C%20UX%20design%2C%20portfolio%20showcase&width=600&height=450&seq=123463&orientation=landscape" alt="Mobile App UI Design" class="w-full h-64 object-cover object-top">
+                    <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-white text-xl font-bold mb-2">Safari Guide App</h3>
+                        <p class="text-white text-sm mb-4 text-center">UI/UX design for a mobile application for safari tourists.</p>
+                        <button class="bg-white text-primary px-4 py-2 rounded-button font-medium whitespace-nowrap">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-primary text-primary px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-colors">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">I offer a comprehensive range of graphic design services to help your business stand out in today's competitive market.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-pen-nib-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Logo Design</h3>
+                    <p class="text-gray-600 mb-6">Create a unique and memorable logo that captures your brand's essence and resonates with your target audience.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-layout-4-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Brand Identity</h3>
+                    <p class="text-gray-600 mb-6">Develop a cohesive visual identity including logo, color palette, typography, and brand guidelines.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-artboard-2-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Print Design</h3>
+                    <p class="text-gray-600 mb-6">Design eye-catching business cards, brochures, flyers, posters, and other print materials for your business.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-computer-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Art</h3>
+                    <p class="text-gray-600 mb-6">Create custom digital illustrations, artwork, and graphics for various applications and platforms.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-smartphone-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-6">Design user-friendly interfaces for websites and mobile applications with a focus on user experience.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full text-primary mb-6">
+                        <i class="ri-shopping-bag-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Packaging Design</h3>
+                    <p class="text-gray-600 mb-6">Create attractive and functional packaging designs that enhance your product's appeal and marketability.</p>
+                    <a href="#contact" class="text-primary font-medium flex items-center gap-2 hover:underline">
+                        Learn More
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here's what some of my clients have to say about working with me.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-double-quotes-l ri-3x"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">"Maina created an exceptional logo and brand identity for our startup. His creativity and attention to detail exceeded our expectations. Highly recommended!"</p>
+                    <div class="flex items-center justify-center">
+                        <div class="text-center">
+                            <h4 class="font-bold text-gray-900">Daniel Kimani</h4>
+                            <p class="text-gray-500 text-sm">CEO, TechHub Kenya</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-double-quotes-l ri-3x"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">"Working with Maina was a pleasure. He understood our vision for the festival posters and delivered designs that perfectly captured the spirit of our event."</p>
+                    <div class="flex items-center justify-center">
+                        <div class="text-center">
+                            <h4 class="font-bold text-gray-900">Sarah Odhiambo</h4>
+                            <p class="text-gray-500 text-sm">Event Manager, Rift Valley Music Festival</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-double-quotes-l ri-3x"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">"The packaging design Maina created for our skincare line has significantly increased our sales. His designs are not only beautiful but also functional and market-ready."</p>
+                    <div class="flex items-center justify-center">
+                        <div class="text-center">
+                            <h4 class="font-bold text-gray-900">Rebecca Njeri</h4>
+                            <p class="text-gray-500 text-sm">Founder, Aloe Naturals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind? Let's discuss how I can help bring your vision to life.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your name">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your email">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Subject">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <div class="mb-6 flex items-center">
+                            <input type="checkbox" id="consent" class="custom-checkbox mr-3">
+                            <label for="consent" class="text-gray-600 text-sm">I agree to the processing of my personal data for contact purposes.</label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-600 transition-colors">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary flex-shrink-0 mt-1">
+                                    <i class="ri-map-pin-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
+                                    <p class="text-gray-600">Nyahururu, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary flex-shrink-0 mt-1">
+                                    <i class="ri-phone-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+254 746 974 094</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary flex-shrink-0 mt-1">
+                                    <i class="ri-mail-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                    <p class="text-gray-600">mainajames@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-semibold text-gray-900 mb-4">Follow Me</h4>
+                            <div class="flex gap-4">
+                                <a href="https://instagram.com/mainajames" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-instagram-line ri-lg"></i>
+                                </a>
+                                <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-behance-line ri-lg"></i>
+                                </a>
+                                <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-dribbble-line ri-lg"></i>
+                                </a>
+                                <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-linkedin-line ri-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-semibold text-gray-900 mb-4">Working Hours</h4>
+                            <div class="space-y-2">
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p class="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                                <p class="text-gray-600">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white">Maina James</a>
+                    <p class="mt-2 text-gray-400">Graphic Designer based in Nyahururu, Kenya</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <div class="mt-6 md:mt-0 flex gap-4">
+                    <a href="https://instagram.com/mainajames" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-instagram-line ri-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-behance-line ri-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-dribbble-line ri-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-linkedin-line ri-lg"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Maina James. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                    <span class="mx-2 text-gray-600">|</span>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fixed bottom-6 right-6">
+            <a href="#home" class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-white shadow-lg hover:bg-blue-600 transition-colors">
+                <i class="ri-arrow-up-line ri-lg"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Portfolio Filter
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary', 'text-white');
+                        btn.classList.add('text-gray-700', 'hover:bg-gray-200');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-primary', 'text-white');
+                    this.classList.remove('text-gray-700', 'hover:bg-gray-200');
+                    
+                    // Filter logic would go here in a real implementation
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for header height
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
